@@ -1,0 +1,553 @@
+/* ===========================================================
+   Kashish Paul Portfolio — Global Styles (Shared Across All Pages)
+   style.css
+   =========================================================== */
+
+/* ===== Global Page Setup ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: #704c13;
+  scroll-behavior: smooth;
+  background: url("../assets/bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #704c13 !important; /* Solid dark brown navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #ffffff !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e9bc8b !important; /* Soft golden hover */
+}
+
+/* ===== Body Padding for Fixed Navbar ===== */
+body {
+  padding-top: 80px;
+}
+
+/* ===== Shared Button Styles ===== */
+.btn-primary {
+  background-color: #704c13;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e9bc8b;
+  color: #704c13;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(112, 76, 19, 0.3);
+}
+
+/* ===== Page Footer Note (Optional) ===== */
+.page-note {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #704c13;
+}
+
+
+/* ===== index.css ===== */
+
+/* ===========================================================
+   Kashish Paul — Index Page Styles
+   =========================================================== */
+
+/* ===== Reset Body ===== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #704c13;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  min-height: 100vh; /* Full viewport height */
+  background: transparent; /* Background handled by style.css */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 100px; /* Space for fixed navbar */
+  padding-bottom: 0; /* Remove extra bottom space */
+  flex-wrap: wrap;
+}
+
+.hero img {
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(112, 76, 19, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(112, 76, 19, 0.5);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #704c13;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #e9bc8b;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #704c13;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  max-width: 480px;
+}
+
+.hero .btn-primary {
+  background-color: #704c13;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(112, 76, 19, 0.4);
+  transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  background-color: #e9bc8b;
+  color: #704c13;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(112, 76, 19, 0.5);
+}
+
+/* ===== Footer Note ===== */
+.hero .page-note {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #704c13;
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 0; /* Keep bottom padding 0 */
+  }
+
+  .hero img {
+    max-width: 350px;
+    margin-bottom: 25px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 10px 24px;
+  }
+}
+
+
+/* ===== personal.css ===== */
+
+/* ===========================================================
+   Kashish Paul — Personal (About) Page Styles
+   =========================================================== */
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: #704c13;
+  background: url("../assets/bg.png") no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 90px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #704c13 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e9bc8b !important;
+}
+
+/* Profile Section */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 4px solid #704c13;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(112, 76, 19, 0.3);
+}
+
+/* Resume Button */
+.btn-outline-primary {
+  color: #704c13;
+  border-color: #704c13;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  padding: 10px 28px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #704c13;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* About Info */
+.about-info h1 {
+  color: #704c13;
+}
+
+.about-info p.lead {
+  color: #e9bc8b;
+}
+
+.about-info p {
+  line-height: 1.6;
+  color: #4a3a15;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  border-top: 2px solid #704c13;
+  color: #704c13;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-info {
+    text-align: center;
+  }
+
+  .profile-img {
+    margin-bottom: 20px;
+  }
+}
+/* ===== Custom Brown Outline Button ===== */
+.btn-outline-brown {
+  color: #704c13;
+  border: 2px solid #704c13;
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brown:hover {
+  background-color: #704c13;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(112, 76, 19, 0.3);
+}
+
+
+
+/* ===== education.css ===== */
+
+/* ===========================================================
+   Kashish Paul Portfolio — Education Page Styles
+   =========================================================== */
+
+/* ===== Main Heading & Subheading ===== */
+main h1 {
+  font-size: 2.5rem;
+  color: #704c13; /* Dark brown to match theme */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p.text-muted {
+  color: #5a3c0a; /* Slightly darker brown for subtext */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* ===== Education Cards ===== */
+main .card {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(112, 76, 19, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 76, 19, 0.2);
+}
+
+/* Card Title & Badge */
+main .card h4 {
+  font-weight: 600;
+  color: #704c13;
+  margin-bottom: 0.5rem;
+}
+
+main .card .badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+  border-radius: 0.5rem;
+}
+
+/* Card Text */
+main .card p {
+  color: #5a3c0a;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Footer Override ===== */
+footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #704c13;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #e9bc8b;
+}
+
+
+/* ===== experience.css ===== */
+
+/* ===========================================================
+   Kashish Paul Portfolio — Work Experience Page Styles
+   =========================================================== */
+
+/* ===== Main Heading & Subheading ===== */
+main h1 {
+  font-size: 2.5rem;
+  color: #704c13; /* Dark brown */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p.text-muted {
+  color: #5a3c0a; /* Slightly darker brown for subtext */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* ===== Experience Cards ===== */
+main .card {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(112, 76, 19, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 76, 19, 0.2);
+}
+
+/* Card Titles */
+main .card h4 {
+  font-weight: 600;
+  color: #704c13;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Text */
+main .card p,
+main .card small {
+  color: #5a3c0a;
+  line-height: 1.6;
+}
+
+/* Experience List */
+main .card ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+main .card ul li {
+  margin-bottom: 0.5rem;
+  color: #5a3c0a;
+}
+
+/* Footer Override */
+footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #704c13;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #e9bc8b;
+}
+
+
+
+/* ===== certification.css ===== */
+
+/* ===========================================================
+   Kashish Paul Portfolio — Certifications Page Styles
+   =========================================================== */
+
+/* ===== Main Heading & Subheading ===== */
+main h1 {
+  font-size: 2.5rem;
+  color: #704c13; /* Dark brown to match theme */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p.text-muted {
+  color: #5a3c0a; /* Slightly darker brown for subtext */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* ===== Certification Cards ===== */
+main .card {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  border: 2px solid #ffffff; /* Default white border */
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(112, 76, 19, 0.1); /* subtle shadow initially */
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect: brown shadow + lift + border */
+main .card:hover {
+  transform: translateY(-5px); /* subtle lift */
+  box-shadow: 0 15px 30px rgba(112, 76, 19, 0.5); /* rich brown shadow */
+  border-color: #704c13; /* optional brown border */
+}
+
+/* ===== Card Images ===== */
+main .card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .card:hover img {
+  transform: scale(1.03); /* slight zoom on hover */
+}
+
+/* ===== Card Titles & Tutor Names ===== */
+main .card h5 {
+  font-weight: 600;
+  color: #704c13;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+main .card p.text-muted.small {
+  color: #5a3c0a;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+/* ===== Card Description ===== */
+main .card p.text-muted.mb-0 {
+  color: #5a3c0a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1200px) {
+  main .card {
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  main .card {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main .card {
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #704c13;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #e9bc8b;
+}
